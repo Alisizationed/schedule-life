@@ -1,0 +1,74 @@
+/* Design tokens — hand-drawn notebook / pocket-planner palette.
+   Light = blue ballpoint on grid paper, dark = chalk on a slate board.
+   The theme feature sets data-theme="light|dark" on <html>; the media query
+   is a fallback for first paint before JS resolves the sunset-based theme. */
+:root {
+  --bg: #f4f7fb;
+  --grid: #dce4f0;
+  --surface: #ffffff;
+  --panel: #eef2f9;
+  --fg: #232a5c;
+  --muted: #6a729e;
+  --line: #232a5c;
+  --shadow: rgba(35, 42, 92, 0.28);
+  --hair: #d5ddec;
+  --accent: #ffe45c;
+  --accent-ink: #232a5c;
+  --accent2: #3c6bff;
+  --danger: #e5383b;
+  --warn: #ff9f1c;
+  --ok: #4cc38a;
+  --now: #e5383b;
+  --blockink: #262638;
+
+  --hand: 'Patrick Hand', 'Segoe Print', 'Bradley Hand', cursive;
+  --marker: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive;
+
+  /* Wobbly, hand-drawn border radii. */
+  --wob: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --wob2: 12px 4px 14px 5px / 5px 14px 4px 12px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #1d2527;
+    --grid: #273235;
+    --surface: #252f31;
+    --panel: #2d393c;
+    --fg: #f1efe4;
+    --muted: #a7b2ac;
+    --line: #e9e7da;
+    --shadow: rgba(0, 0, 0, 0.45);
+    --hair: #3a484b;
+    --accent: #ffe45c;
+    --accent-ink: #262638;
+    --accent2: #8fb0ff;
+    --danger: #ff7a7c;
+    --warn: #ffb84d;
+    --ok: #6fdda6;
+    --now: #ff7a7c;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #1d2527;
+  --grid: #273235;
+  --surface: #252f31;
+  --panel: #2d393c;
+  --fg: #f1efe4;
+  --muted: #a7b2ac;
+  --line: #e9e7da;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --hair: #3a484b;
+  --accent: #ffe45c;
+  --accent-ink: #262638;
+  --accent2: #8fb0ff;
+  --danger: #ff7a7c;
+  --warn: #ffb84d;
+  --ok: #6fdda6;
+  --now: #ff7a7c;
+  color-scheme: dark;
+}
